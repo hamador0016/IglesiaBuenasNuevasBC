@@ -3,7 +3,7 @@ import React from 'react'
 const Seremons = () => {
   return (
     <div>
-      Seremons
+      Ceremonias
     </div>
   )
 }

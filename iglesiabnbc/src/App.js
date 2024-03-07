@@ -1,18 +1,19 @@
 import './App.css';
 import {Routes,Route} from 'react-router-dom';
-import Header from "./Components/Header"
-import Home from './Components/Home'
-import Contact from './Components/Contact'
-import Events from './Components/Events'
-import Families from './Components/Families'
-import Pastors from './Components/Pastors'
-import Seremons from './Components/Seremons'
-import Footer from './Components/Footer'
+import Header from "./Components/Header/Header.jsx"
+import Home from './Components/Home/Home.jsx'
+import Contact from './Components/Contact/Contact.jsx'
+import Events from './Components/Events/Events.jsx'
+import Families from './Components/Families/Families.jsx'
+import Pastors from './Components/Pastors/Pastors.jsx'
+import Seremons from './Components/Seremons/Seremons.jsx'
+import Footer from './Components/Footer/Footer.jsx'
 
 
 function App() {
   return (
    <>
+   <div className='site-content'>
     <Header></Header>
     <Routes>
       <Route path='/' element={<Home></Home>}></Route>
@@ -23,6 +24,7 @@ function App() {
       <Route path='/Seremons' element={<Seremons></Seremons>}></Route>
     </Routes>
     <Footer></Footer>
+    </div>
    </>
   );
 }

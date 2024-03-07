@@ -3,10 +3,9 @@ import React from 'react'
 const Home = () => {
   return (
     <div>
-      Home
+      Inicio
     </div>
   )
 }
 
 export default Home
-Home

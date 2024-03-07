@@ -3,7 +3,7 @@ import React from 'react'
 const Pastors = () => {
   return (
     <div>
-      Pastors
+      Pastores
     </div>
   )
 }

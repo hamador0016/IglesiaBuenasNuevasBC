@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Events = () => {
+const Header = () => {
   return (
     <div>
-      Events
+      Header
     </div>
   )
 }
 
-export default Events
+export default Header

@@ -13,7 +13,7 @@ import Footer from './Components/Footer/Footer.jsx'
 function App() {
   return (
    <>
-   <div className='site-content'>
+   <div>
     <Header></Header>
     <Routes>
       <Route path='/' element={<Home></Home>}></Route>

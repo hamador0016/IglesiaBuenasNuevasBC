@@ -2,11 +2,10 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div>
+    <div style={{ position:'absolute',width: "100%"}}>
       <footer
         className="site-footer"
         style={{
-          position: "absolute",
           bottom: "0",
           width: "100%",
           lineHeight: "20px",

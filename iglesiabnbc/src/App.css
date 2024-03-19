@@ -130,7 +130,7 @@ figure {
   margin: 0; }
 
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid #d7595b;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -202,7 +202,7 @@ table {
   font-size: 14px; }
 
 body {
-  color: #89837c;
+  color: #d7595b;
   font-family: arial, sans-serif;
   font-weight: 300;
   line-height: 1.5; }
@@ -216,7 +216,7 @@ h1, h2, h3, h4, h5, h6 {
 
 hr {
   border: none;
-  border-bottom: 1px solid #777; }
+  border-bottom: 1px solid #d7595b; }
 
 ul, ol {
   margin: 0;
@@ -224,7 +224,7 @@ ul, ol {
 
 a {
   text-decoration: none;
-  color: #8f7655; }
+  color: #a76767; }
 
 address {
   font-style: normal; }
@@ -252,25 +252,25 @@ form input[type="submit"], form button, form input[type="reset"] {
  */
 .button, form input[type="submit"], form button, form input[type="reset"] {
   display: inline-block;
-  background: #e2caae;
-  background: -webkit-linear-gradient(#e2caae, #c39f70);
-  background: linear-gradient(#e2caae, #c39f70);
-  border-bottom: 1px solid #a68861;
+  background: #d7595b;
+  background: -webkit-linear-gradient(#d7595b, #d7595b);
+  background: linear-gradient(#d7595b, #d7595b);
+  border-bottom: 1px solid #d7595b;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   padding: 10px 25px;
   border-radius: 5px;
-  color: #715b3e;
+  color: #ffffff;
   text-transform: uppercase;
   font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
   font-weight: 400;
   line-height: normal; }
   .button.secondary, form input.secondary[type="submit"], form button.secondary, form input.secondary[type="reset"] {
-    background: #e3dfda;
-    background: -webkit-linear-gradient(#e3dfda, #d0cbc4);
-    background: linear-gradient(#e3dfda, #d0cbc4);
-    border-bottom: 1px solid #b1aea8;
-    color: #7c7975; }
+    background: #ffffff;
+    background: -webkit-linear-gradient(#ffffff, #ffffff);
+    background: linear-gradient(#ffffff, #ffffff);
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff; }
 
 .container {
   margin-right: auto;
@@ -1131,7 +1131,7 @@ form input[type="submit"], form button, form input[type="reset"] {
   .branding .logo {
     margin-bottom: 10px; }
   .branding .site-title {
-    color: #8f7655;
+    color: #d7595b;
     font-size: 14px;
     font-size: 1em; }
 
@@ -1169,12 +1169,12 @@ form input[type="submit"], form button, form input[type="reset"] {
                 transition: .3s ease; }
         .main-navigation .menu .menu-item a small {
           display: block;
-          color: #a59e95;
+          color: #d7595b;
           font-weight: 300;
           font-size: 10px;
           font-size: 0.7142857143rem; }
       .main-navigation .menu .menu-item.current-menu-item a, .main-navigation .menu .menu-item:hover a {
-        border-bottom-color: #8f7655;
+        border-bottom-color: #d7595b;
         border-width: 2px; }
 
 .mobile-navigation {
@@ -1197,7 +1197,7 @@ form input[type="submit"], form button, form input[type="reset"] {
       padding: 10px 20px; }
       .mobile-navigation .menu a small {
         display: block;
-        color: #a59e95; }
+        color: #d7595b; }
 
 .hero {
   position: relative; }
@@ -1221,7 +1221,7 @@ form input[type="submit"], form button, form input[type="reset"] {
       text-align: center;
       font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
       text-transform: uppercase;
-      color: white; }
+      color: #d7595b; }
     .hero .slides .slide-subtitle {
       font-size: 30px;
       font-size: 2.1428571429em;
@@ -1294,7 +1294,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     font-size: 24px;
     font-size: 1.7142857143em;
     text-transform: uppercase;
-    color: #544531; }
+    color: #e95d61; }
 
 .news {
   text-align: center;
@@ -1309,7 +1309,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     font-size: 1em;
     margin: 0 0 10px; }
   .news .date {
-    color: #a59e95;
+    color: #d7595b;
     font-size: 12px;
     font-size: 0.8571428571em;
     font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
@@ -1338,7 +1338,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     position: absolute;
     width: 50%;
     right: 0;
-    color: #a59e95;
+    color: #d7595b;
     font-size: 12px;
     font-size: 0.8571428571em;
     font-weight: 400;
@@ -1401,7 +1401,7 @@ form input[type="submit"], form button, form input[type="reset"] {
   .seremon-list .seremon-meta {
     font-size: 12px;
     font-size: 0.8571428571em;
-    color: #a59e95;
+    color: #807777;
     font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
     text-transform: lowercase; }
     .seremon-list .seremon-meta .pastor {
@@ -1441,7 +1441,7 @@ form input[type="submit"], form button, form input[type="reset"] {
 .sidebar .widget {
   margin-bottom: 40px; }
   .sidebar .widget .widget-title {
-    color: #544531;
+    color: #d7595b;
     font-size: 18px;
     font-size: 1.2857142857em;
     font-weight: 600; }
@@ -1454,23 +1454,23 @@ form input[type="submit"], form button, form input[type="reset"] {
     border-bottom: 1px solid #e5e5e5; }
     .arrow li a {
       display: block;
-      color: #89837c;
+      color: #d7595b;
       -webkit-transition: .3s ease;
               transition: .3s ease; }
       .arrow li a:hover {
-        color: #8f7655; }
+        color: #d7595b; }
 
 /*
  * Footer Styles
  */
 .site-footer {
-  background: #363641;
+  background: #1d2441;
   padding: 50px 0;
   color: #acacb1; }
   .site-footer .widget {
     margin-bottom: 30px; }
     .site-footer .widget .widget-title {
-      color: #dcc2a0;
+      color: #d7595b;
       font-size: 18px;
       font-size: 1.2857142857em; }
 

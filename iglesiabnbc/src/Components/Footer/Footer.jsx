@@ -18,15 +18,18 @@ const Footer = () => {
               <div className="widget">
                 <h3 className="widget-title">Nuestra dirección</h3>
                 <p>Aqui va un texto</p>
-                <ul className="adress">
+                <ul className="adress" style={{listStyle: "none"}}>
                   <li>
-                    <i class="bi bi-geo-alt">Buenas</i>
+                    <i class="bi bi-geo-alt" style={{marginRight: "1%"}}></i>
+                    Buenas
                   </li>
                   <li>
-                    <i class="bi bi-geo-alt">Buenas</i>
+                    <i class="bi bi-telephone" style={{marginRight: "1%"}}></i>
+                    Buenas
                   </li>
                   <li>
-                    <i class="bi bi-geo-alt">Buenas</i>
+                    <i className="bi bi-envelope" style={{marginRight: "1%"}}></i>
+                    Buenas
                   </li>
                 </ul>
               </div>
@@ -37,13 +40,13 @@ const Footer = () => {
                 <p>Aqui va un texto</p>
                 <ul className="bullet">
                   <li>
-                    <a class="bi bi-geo-alt">Buenas</a>
+                    <a>Buenas</a>
                   </li>
                   <li>
-                    <a class="bi bi-geo-alt">Buenas</a>
+                    <a>Buenas</a>
                   </li>
                   <li>
-                    <a class="bi bi-geo-alt">Buenas</a>
+                    <a>Buenas</a>
                   </li>
                 </ul>
               </div>

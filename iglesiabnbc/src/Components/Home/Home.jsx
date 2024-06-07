@@ -1,7 +1,17 @@
 import React from "react";
 import slide1 from "./../../images/slide-1.jpg";
+import { useState, useEffect } from "react";
 
 const Home = () => {
+  const [proximoseventos,setproximoseventos] = useState([]);
+  
+  useEffect(()=>{
+    fetch('/proximoseventos.json')
+    .then ((Response) => Response.json())
+    .then ((data)=> setproximoseventos(data))
+    .catch ((error)=> console.error('Se ha encontrado el siguiente error: ',error));
+  },[])
+
   return (
     <div>
       <div className="hero" style={{ paddingBottom: "100px" }}>
@@ -73,42 +83,26 @@ const Home = () => {
               <div className="col-md-6">
                 <h2 className="section-title">Proximos Eventos</h2>
                 <ul className="event-list">
-                  <li>
+                { proximoseventos.map((eventos,index)=>(
+                  <li key={index}>
                     <a href="#">
-                      <h3 className="event-title">La Sangre de Cristo</h3>
+                      <h3 className="event-title">{eventos.title}</h3>
                       <span className="event-meta">
                         <span>
                           <i
                             className="bi bi-calendar"
                             style={{ marginRight: "2%" }}
                           ></i>
-                          30 de mar 2014
+                          {eventos.date}
                         </span>
                         <span>
                           <i className="bi bi-geo-alt" style={{marginRight: '1%'}}></i>
-                          Reino unido
+                          {eventos.location}
                         </span>
                       </span>
                     </a>
                   </li>
-                  <li>
-                    <a href="#">
-                      <h3 className="event-title">La Sangre de Cristo</h3>
-                      <span className="event-meta">
-                        <span>
-                          <i
-                            className="bi bi-calendar"
-                            style={{ marginRight: "2%" }}
-                          ></i>
-                          30 de mar 2014
-                        </span>
-                        <span>
-                          <i className="bi bi-geo-alt" style={{marginRight: '1%'}}></i>
-                          Reino unido
-                        </span>
-                      </span>
-                    </a>
-                  </li>
+                ))}
                 </ul>
               </div>
               <div className="col-md-6">

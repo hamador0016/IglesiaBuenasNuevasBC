@@ -4,11 +4,19 @@ import { useState, useEffect } from "react";
 
 const Home = () => {
   const [proximoseventos,setproximoseventos] = useState([]);
+  const [libros,setlibros] = useState([])
   
   useEffect(()=>{
     fetch('/proximoseventos.json')
     .then ((Response) => Response.json())
     .then ((data)=> setproximoseventos(data))
+    .catch ((error)=> console.error('Se ha encontrado el siguiente error: ',error));
+  },[])
+
+  useEffect(()=>{
+    fetch('\libros.json')
+    .then ((Response) => Response.json())
+    .then ((data)=> setlibros(data))
     .catch ((error)=> console.error('Se ha encontrado el siguiente error: ',error));
   },[])
 
@@ -54,30 +62,22 @@ const Home = () => {
           <div className="container">
             <h2 className="section-title">Libros</h2>
             <div className="row">
-              <div className="col-md-3 col-sm-6">
-                <div className="news">
-                  <img className="news-image" src="images/news-thumb-1.jpg" />
-                  <h3 className="news-title">El principito</h3>
-                  <small className="date">
+              { libros.map((libros,index)=>(
+                <li key={index}>
+                  <a href="#">
+                  <h3 className="event-title">{libros.title}</h3>
+                  <span className="libros-meta">
+                  <span>
                     <i
-                      className="bi bi-calendar"
-                      style={{ marginRight: "2%" }}
+                    className="bi bi-book"
+                    style={{ marginRight: "2%"}}
                     ></i>
-                    3 marzo 2020
-                  </small>
-                </div>
-              </div>
-              <div className="col-md-3 col-sm-6">
-                <div className="news">
-                  <img className="news-image" src="images/news-thumb-1.jpg" />
-                  <h3 className="news-title">El principito</h3>
-                  <small className="date">
-                    <i className="bi bi-calendar" style={{ marginRight: "2%" }}>
-                    </i>
-                    3 marzo 2020
-                  </small>
-                </div>
-              </div>
+                    {libros.date}
+                  </span>
+                  </span>
+                  </a>
+                </li>
+              ))}
             </div>
             <div className="row">
               <div className="col-md-6">

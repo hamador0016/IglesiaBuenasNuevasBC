@@ -61,18 +61,17 @@ const Home = () => {
         <div className="fullwidth-block">
           <div className="container">
             <h2 className="section-title">Libros</h2>
-            <div className="row">
+            <div className="row" style={{display: "flex",}}>
               { libros.map((libros,index)=>(
                 <li key={index}>
                   <a href="#">
-                  <h3 className="event-title">{libros.title}</h3>
+                  <h3 className="books-title">{libros.title}</h3>
+                  <img src={libros.imageUrl} style={{width: "150px", height: "200", borderRadius:"10px", margin:"10px"}}/>
+                  
                   <span className="libros-meta">
                   <span>
-                    <i
-                    className="bi bi-book"
-                    style={{ marginRight: "2%"}}
-                    ></i>
-                    {libros.date}
+                    
+                    <div style={{margin:"auto"}}>{libros.date}</div>
                   </span>
                   </span>
                   </a>

@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 
 const Home = () => {
   const [proximoseventos,setproximoseventos] = useState([]);
-  const [libros,setlibros] = useState([])
+  const [libros,setlibros] = useState([]);
+  const [mensajes, setmensajes] = useState([])
   
   useEffect(()=>{
     fetch('/proximoseventos.json')
@@ -17,6 +18,13 @@ const Home = () => {
     fetch('\libros.json')
     .then ((Response) => Response.json())
     .then ((data)=> setlibros(data))
+    .catch ((error)=> console.error('Se ha encontrado el siguiente error: ',error));
+  },[])
+
+  useEffect(()=>{
+    fetch('/ultimomensaje.json')
+    .then ((Response) => Response.json())
+    .then ((data)=> setmensajes(data))
     .catch ((error)=> console.error('Se ha encontrado el siguiente error: ',error));
   },[])
 
@@ -107,47 +115,31 @@ const Home = () => {
               <div className="col-md-6">
                 <h2 className="section-title">Ultimos mensajes</h2>
                 <ul className="seremon-list">
-                  <li>
-                    <img src="images/small-thumb-1.jpg" />
+                {mensajes.map((mensajes,index)=>(
+                  <li key={index}>
+                    <img src={mensajes.imageUrl} />
                     <div className="seremon-detail">
                       <h3 className="seremon-title">
                         <a href="#">
-                          Yo creo en el señor de los cielos (no el de la serie)
+                          {mensajes.title}
                         </a>
                       </h3>
                       <div className="seremon-meta">
                         <div className="pastor">
                           <i className="bi bi-person-fill" style={{marginRight: "1%"}}></i>
-                          Dantel Gevel
+                          {mensajes.predicador}
                         </div>
                         <div className="date">
                           <i
                             className="bi bi-calendar"
                             style={{ marginRight: "1%" }}
                           ></i>
-                          18 de noviembre 2019
+                          {mensajes.date}
                         </div>
                       </div>
                     </div>
                   </li>
-                  <li>
-                    <img src="images/small-thumb-1.jpg" />
-                    <div className="seremon-detail">
-                      <h3 className="seremon-title">
-                        <a href="#">Dios no está muerto</a>
-                      </h3>
-                      <div className="seremon-meta">
-                        <div className="pastor">
-                          <i className="bi bi-person-fill" style={{marginRight: "1%"}}></i>
-                          Dantel Gevel
-                        </div>
-                        <div className="date">
-                          <i className="bi bi-calendar" style={{marginRight: "1%"}}></i>
-                          18 de noviembre 2019
-                        </div>
-                      </div>
-                    </div>
-                  </li>
+                  ))}
                 </ul>
                 <div className="text-center">
                   <a className="button">Ver todos los mensajes</a>

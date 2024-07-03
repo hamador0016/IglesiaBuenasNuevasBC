@@ -252,7 +252,7 @@ form input[type="submit"], form button, form input[type="reset"] {
  */
 .button, form input[type="submit"], form button, form input[type="reset"] {
   display: inline-block;
-  background: #d7595b;
+  background: #f00;
   background: -webkit-linear-gradient(#d7595b, #d7595b);
   background: linear-gradient(#d7595b, #d7595b);
   border-bottom: 1px solid #d7595b;
@@ -656,7 +656,8 @@ form input[type="submit"], form button, form input[type="reset"] {
     width: 41.6666666667%; }
 
   .col-md-6 {
-    width: 50%; }
+    width: 50%;
+     }
 
   .col-md-7 {
     width: 58.3333333333%; }

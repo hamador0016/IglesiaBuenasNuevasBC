@@ -15,14 +15,14 @@ const Home = () => {
   },[])
 
   useEffect(()=>{
-    fetch('\libros.json')
+    fetch('/libros.json')
     .then ((Response) => Response.json())
     .then ((data)=> setlibros(data))
     .catch ((error)=> console.error('Se ha encontrado el siguiente error: ',error));
   },[])
 
   useEffect(()=>{
-    fetch('/ultimomensaje.json')
+    fetch('/ultimosmensaje.json')
     .then ((Response) => Response.json())
     .then ((data)=> setmensajes(data))
     .catch ((error)=> console.error('Se ha encontrado el siguiente error: ',error));
@@ -112,12 +112,12 @@ const Home = () => {
                 ))}
                 </ul>
               </div>
-              <div className="col-md-6">
+              <div className="col-md-6" style={{display:"auto"}}>
                 <h2 className="section-title">Ultimos mensajes</h2>
                 <ul className="seremon-list">
                 {mensajes.map((mensajes,index)=>(
                   <li key={index}>
-                    <img src={mensajes.imageUrl} />
+                    <img src={mensajes.imageUrl} style={{width: "150px", height: "200px", borderRadius:"10px", margin:"10px"}} />
                     <div className="seremon-detail">
                       <h3 className="seremon-title">
                         <a href="#">

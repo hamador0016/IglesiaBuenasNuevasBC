@@ -71,19 +71,18 @@ const Home = () => {
             <h2 className="section-title">Libros</h2>
             <div className="row" style={{display: "flex",}}>
               { libros.map((libros,index)=>(
-                <li key={index}>
+                <ul key={index}>
                   <a href="#">
                   <h3 className="books-title">{libros.title}</h3>
                   <img src={libros.imageUrl} style={{width: "150px", height: "200", borderRadius:"10px", margin:"10px"}}/>
                   
                   <span className="libros-meta">
                   <span>
-                    
                     <div style={{margin:"auto"}}>{libros.date}</div>
                   </span>
                   </span>
                   </a>
-                </li>
+                </ul>
               ))}
             </div>
             <div className="row">
@@ -117,7 +116,7 @@ const Home = () => {
                 <ul className="seremon-list">
                 {mensajes.map((mensajes,index)=>(
                   <li key={index}>
-                    <img src={mensajes.imageUrl} style={{width: "150px", height: "200px", borderRadius:"10px", margin:"10px"}} />
+                    <img src={mensajes.imageUrl} style={{width: "75px", height: "125px"}} />
                     <div className="seremon-detail">
                       <h3 className="seremon-title">
                         <a href="#">
